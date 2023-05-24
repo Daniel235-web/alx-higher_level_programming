@@ -1,14 +1,16 @@
 #!/usr/bin/node
 
-const myvar = process.argv.slice(2);
-const myLetter = 'X';
-let i = 0;
-const myarg = parseInt(process.argv[2]);
+const arg = process.argv[2];
+const size = parseInt(arg);
 
-if (myvar.length === 0) {
+if (isNaN(size)) {
   console.log('Missing size');
-}
-while (i < myarg) {
-  console.log(myLetter.repeat(myarg));
-  i++;
+} else {
+  for (let i = 0; i < size; i++) {
+    let line = '';
+    for (let j = 0; j < size; j++) {
+      line += 'X';
+    }
+    console.log(line);
+  }
 }
