@@ -1,32 +1,12 @@
 #!/usr/bin/node
-class Rectangle {
-  constructor (w, h) {
-    this.width = w;
-    this.height = h;
-  }
+// class Square that defines a square and inherits from Rectangle
 
-  print () {
-    for (let i = 0; i < this.height; i++) {
-      let line = '';
-      for (let j = 0; j < this.width; j++) {
-        line += 'X';
-      }
-      console.log(line);
-    }
-  }
+const Rectangle = require('./4-rectangle');
 
-  rotate () {
-    [this.width, this.height] = [this.height, this.width];
-  }
-
-  double () {
-    this.width *= 2;
-    this.height *= 2;
-  }
-}
-
-class Square extends Rectangle {
+const Square = class Square extends Rectangle {
   constructor (size) {
     super(size, size);
   }
-}
+};
+
+module.exports = Square;
