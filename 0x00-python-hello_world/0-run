@@ -1,2 +1,7 @@
-#!/usr/bin/python3
-python3 $PYFILE
+#!/bin/bash
+
+# Set the Python file name
+export PYFILE="example.py"
+
+# Run the Python script
+python "$PYFILE"
