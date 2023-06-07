@@ -8,3 +8,4 @@ def print_sorted_dictionary(a_dictionary):
     keys.sort()
     for key in keys:
         print("{}: {}".format(key, a_dictionary[key]))
+
