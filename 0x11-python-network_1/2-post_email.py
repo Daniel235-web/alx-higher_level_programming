@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import urllib.request
 import urllib.parse
 import sys
@@ -21,3 +22,4 @@ try:
 except urllib.error.HTTPError as e:
     # Handle HTTPError exceptions
     print(f"HTTP Error {e.code}: {e.reason}")
+
